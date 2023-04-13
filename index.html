@@ -37,26 +37,41 @@
             <p>En plein centre-ville ou en plein nature</p>
         </div>
         <!-- Le formulaire de recherche -->
-            <form>
-                <i class="fa-solid fa-location-dot" type="icon" id="icon"></i>
-                <input type="text" id="town" value="Marseille, France">
-                <input type="submit" value="Rechercher">
-            </form>
+        <form>
+            <i class="fa-solid fa-location-dot" type="icon" id="icon"></i>
+            <input type="text" id="town" value="Marseille, France">
+            <button type="submit">
+                <span>Rechercher</span>
+                <i class="fa-solid fa-search"></i>
+            </button>
+            <!--<input type="submit" value="Rechercher">-->
+        </form>
         <!-- La partie Filtres -->
         <div class="filtres">
             <p>Filtres</p>
-            <button class="btn-economie">
-                <i class="fa-solid fa-money-bill-wave"></i>&ensp;Èconomique
-            </button>
-            <button>
-                <i class="fa-solid fa-person"></i>&ensp;Familial
-            </button>
-            <button>
-                <i class="fa-solid fa-heart"></i>&ensp;Romantique
-            </button>
-            <button>
-                <i class="fa-solid fa-fire"></i>&ensp;Nos pépites
-            </button>
+            <ul>
+                <li>
+                    <button class="btn-economie">
+                        <i class="fa-solid fa-money-bill-wave"></i>&ensp;Èconomique
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-person"></i>&ensp;Familial
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-heart"></i>&ensp;Romantique
+                    </button>
+                </li>
+                <li>
+
+                    <button>
+                        <i class="fa-solid fa-fire"></i>&ensp;Nos pépites
+                    </button>
+                </li>
+            </ul>
         </div>
         <div class="information">
             <i class="fa-solid fa-info"></i>
