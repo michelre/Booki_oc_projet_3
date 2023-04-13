@@ -20,7 +20,7 @@ body {
     margin: 0;
 }
 
-img  {
+img {
     width: 100%;
 }
 
@@ -64,7 +64,7 @@ header {
     display: flex;
     justify-content: space-between;
     height: 80px;
-    
+
 }
 
 header img {
@@ -118,15 +118,14 @@ header img {
 }
 
 .titre-and-sous-titre p {
-margin-top: 8px;    
+    margin-top: 8px;
 }
 
 /****** Formulaire ***********/
 form {
     display: flex;
-    justify-content:flex-start;
-    height: 80px;
-    margin-top: 35px;
+    justify-content: flex-start;
+    padding-top: 35px;
 
 }
 
@@ -143,10 +142,10 @@ form {
 
 form [type="icon"] {
     width: 50px;
-    height: 48px; 
+    height: 48px;
     background: #F2F2F2;
     border: 1px solid #F2F2F2;
-    border-radius: 15px 0px 0px 15px    
+    border-radius: 15px 0px 0px 15px
 }
 
 input {
@@ -168,11 +167,10 @@ input[type="text"] {
     border: 1px solid #F2F2F2;
 }
 
-input[type="submit"] {
+button[type="submit"] {
     align-items: center;
     padding: 14px 16px;
     gap: 10px;
-    width: 132px;
     height: 50px;
     background: #0065FC;
     border: 1px solid #0065FC;
@@ -185,11 +183,17 @@ input[type="submit"] {
     order: 1;
 }
 
+
+button[type="submit"] i {
+    color: white;
+    display: none;
+}
+
 /****** Filtres And boutons ***********/
 
 .filtres {
     display: flex;
-    justify-content: space-between;
+    padding-top: 35px;
 
 }
 
@@ -201,82 +205,105 @@ input[type="submit"] {
     line-height: 21px;
     text-align: center;
     color: #000000;
-    
-    }
+    margin-right: 15px;
 
-button {
-    width: 103px;
-    height: 20px;
+}
+
+.filtres ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filtres li {
+    margin-bottom: 15px;
+}
+
+.filtres li {
+    margin-right: 15px;
+}
+
+.filtres button {
+    width: 100%;
     border-radius: 25px;
-    padding: 19px 16px;
+    padding: 14px 19px;
     border: 1px solid #D9D9D9;
     font-weight: 700;
     font-size: 17px;
     font-weight: 700;
     font-size: 17px;
+    background: white;
 
 }
 
 
 .btn-economie {
-    
+
 }
 
 .btn-economie a:before {
     left: 130%;
     top: -4px;
-	position: absolute;
+    position: absolute;
     height: 100%;
     font-size: 125%;
     line-height: 3.5;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     transition: all 0.2s;
-	content: "\f178"
+    content: "\f178"
 }
 
 .btn-economie a:hover {
-	border-color: #DEEBFF;
-	color: #000;
-	background: #fff
+    border-color: #DEEBFF;
+    color: #000;
+    background: #fff
 }
 
 .btn-economie a:active {
-	-webkit-transition: all 0s;
+    -webkit-transition: all 0s;
     -moz-transition: all 0s;
     transition: all 0s;
-	background: #000;
-	color: #fff
+    background: #000;
+    color: #fff
 
 }
 
 .btn-economie a:hover:before {
     left: 85%;
-}   
+}
 
 /****** Informations ***********/
 
 .information {
-display: flex;
-justify-content: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 35px 0;
 
+}
+
+.fa-info {
+    margin-right: 10px;
+    font-size: 10px;
 }
 
 .fa-info::before {
     display: flex;
     justify-content: center;
-    padding: 7px 10px;
     border: 1px solid #D9D9D9;
-    border-radius: 15px;   
+    border-radius: 15px;
     box-sizing: border-box;
     width: 24px;
     height: 24px;
-    left: 0px;
-    top: 0px;
-    margin: 35px;
-  }
+    left: 0;
+    top: 0;
+    align-items: center;
+}
 
-  .information p {
+.information p {
     font-weight: 400;
     font-size: 16px;
     width: 1306px;
@@ -286,7 +313,7 @@ justify-content: flex-start;
     flex: none;
     order: 1;
     flex-grow: 1;
-  }
+}
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -411,9 +438,13 @@ justify-content: flex-start;
         width: calc(50% - 30px);
     }
 
-    .activites-container article:nth-child(even){
+    .activites-container article:nth-child(even) {
         width: 50%;
         margin-right: 0;
+    }
+
+    .filtres li{
+        width: calc(50% - 15px);
     }
 }
 
@@ -423,5 +454,18 @@ justify-content: flex-start;
     .activites-container article {
         width: 100% !important;
         margin: 0;
+    }
+
+    button[type="submit"] i {
+        display: block;
+    }
+
+    button[type="submit"] span {
+        display: none;
+    }
+
+    .filtres li{
+        width: 100%;
+        margin-right: 0;
     }
 }
