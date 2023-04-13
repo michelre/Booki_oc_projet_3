@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth; /* Transition dans la navigation au click sur les liens */
 }
 
 :root {
@@ -16,6 +17,11 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
+}
+
+img  {
+    width: 100%;
 }
 
 .main-container {
@@ -52,6 +58,235 @@ body {
 .neutralStar {
     color: var(--main-bg-color)
 }
+
+/***** HEADER ******/
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    
+}
+
+header img {
+    width: 61px;
+    align-self: center;
+}
+
+.menus ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    height: 100%;
+}
+
+.menus ul li {
+    display: flex;
+}
+
+.menus li:first-child {
+    margin-right: 69px;
+}
+
+.menus a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+}
+
+.menus a:hover {
+    color: #0065FC;
+    box-shadow: inset 0px 2px #0065FC; /* Evite le saut de texte au hover */
+}
+
+/****** Titre And Sous-titre ***********/
+
+.titre-and-sous-titre {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.titre-and-sous-titre h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    line-height: 26px;
+}
+
+.titre-and-sous-titre p {
+margin-top: 8px;    
+}
+
+/****** Formulaire ***********/
+form {
+    display: flex;
+    justify-content:flex-start;
+    height: 80px;
+    margin-top: 35px;
+
+}
+
+.fa-location-dot::before {
+    display: flex;
+    justify-content: center;
+    margin: 18px;
+    left: 18px;
+    top: 15px;
+    color: #000000;
+    border-sizing: border-box;
+    padding: 0px;
+}
+
+form [type="icon"] {
+    width: 50px;
+    height: 48px; 
+    background: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px    
+}
+
+input {
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
+input[type="text"] {
+    width: 147px;
+    height: 20px;
+    padding: 14px 24px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    border: 1px solid #F2F2F2;
+}
+
+input[type="submit"] {
+    align-items: center;
+    padding: 14px 16px;
+    gap: 10px;
+    width: 132px;
+    height: 50px;
+    background: #0065FC;
+    border: 1px solid #0065FC;
+    border-radius: 0px 15px 15px 0px;
+    flex-grow: 0;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+}
+
+/****** Filtres And boutons ***********/
+
+.filtres {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.filtres p {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    
+    }
+
+button {
+    width: 103px;
+    height: 20px;
+    border-radius: 25px;
+    padding: 19px 16px;
+    border: 1px solid #D9D9D9;
+    font-weight: 700;
+    font-size: 17px;
+    font-weight: 700;
+    font-size: 17px;
+
+}
+
+
+.btn-economie {
+    
+}
+
+.btn-economie a:before {
+    left: 130%;
+    top: -4px;
+	position: absolute;
+    height: 100%;
+    font-size: 125%;
+    line-height: 3.5;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+	content: "\f178"
+}
+
+.btn-economie a:hover {
+	border-color: #DEEBFF;
+	color: #000;
+	background: #fff
+}
+
+.btn-economie a:active {
+	-webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    transition: all 0s;
+	background: #000;
+	color: #fff
+
+}
+
+.btn-economie a:hover:before {
+    left: 85%;
+}   
+
+/****** Informations ***********/
+
+.information {
+display: flex;
+justify-content: flex-start;
+
+}
+
+.fa-info::before {
+    display: flex;
+    justify-content: center;
+    padding: 7px 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 15px;   
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+    margin: 35px;
+  }
+
+  .information p {
+    font-weight: 400;
+    font-size: 16px;
+    width: 1306px;
+    height: 19px;
+    line-height: 19px;
+    color: #000000;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+  }
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -116,7 +351,24 @@ body {
     margin-bottom: 5px;
 }
 
+.activites-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.activites-container article {
+    width: calc(25% - 30px);
+    margin-right: 30px;
+}
+
+.activites-container article:last-child {
+    width: 25%;
+    margin-right: 0;
+}
+
+.activites-container article img {
+    width: 100%;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -154,9 +406,22 @@ body {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites-container article {
+        width: calc(50% - 30px);
+    }
+
+    .activites-container article:nth-child(even){
+        width: 50%;
+        margin-right: 0;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+    .activites-container article {
+        width: 100% !important;
+        margin: 0;
+    }
 }
