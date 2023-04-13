@@ -30,32 +30,38 @@
             </ul>
         </nav>
     </header>
-    <!-- nav-->
     <!-- MAIN-->
     <main>
-        <h1>Trouver votre hébergement pour des vacances de rêves</h1>
-        <p>Plein centre-ville ou en plein nature</p>
+        <div class="titre-and-sous-titre">
+            <h1>Trouver votre hébergement pour des vacances de rêves</h1>
+            <p>En plein centre-ville ou en plein nature</p>
+        </div>
         <!-- Le formulaire de recherche -->
-        <form>
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="text" id="town" value="Marseille, France">
-            <input type="submit" value="Rechercher">
-        </form>
+            <form>
+                <i class="fa-solid fa-location-dot" type="icon" id="icon"></i>
+                <input type="text" id="town" value="Marseille, France">
+                <input type="submit" value="Rechercher">
+            </form>
         <!-- La partie Filtres -->
-        <p>Filtres</p>
-        <button>
-            <i class="fa-solid fa-money-bill-wave"></i>&ensp;Èconomique
-        </button>
-        <button>
-            <i class="fa-solid fa-person"></i>&ensp;Familial
-        </button>
-        <button>
-            <i class="fa-solid fa-heart"></i>&ensp;Romantique
-        </button>
-        <button>
-            <i class="fa-solid fa-fire"></i>&ensp;Nos pépites
-        </button>
-        <p>Plus de 500 logements sont disponibles dans cette ville</p>
+        <div class="filtres">
+            <p>Filtres</p>
+            <button class="btn-economie">
+                <i class="fa-solid fa-money-bill-wave"></i>&ensp;Èconomique
+            </button>
+            <button>
+                <i class="fa-solid fa-person"></i>&ensp;Familial
+            </button>
+            <button>
+                <i class="fa-solid fa-heart"></i>&ensp;Romantique
+            </button>
+            <button>
+                <i class="fa-solid fa-fire"></i>&ensp;Nos pépites
+            </button>
+        </div>
+        <div class="information">
+            <i class="fa-solid fa-info"></i>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+        </div>
         <!-- Hébergements -->
         <div class="hebergements-and-populaires">
             <section class="hebergements" id="hebergement">
