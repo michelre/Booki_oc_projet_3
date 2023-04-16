@@ -64,7 +64,6 @@ header {
     display: flex;
     justify-content: space-between;
     height: 80px;
-
 }
 
 header img {
@@ -73,11 +72,11 @@ header img {
 }
 
 .menus ul {
-    list-style: none;
-    padding: 0;
     display: flex;
-    margin: 0;
+    list-style: none;
     height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .menus ul li {
@@ -97,22 +96,19 @@ header img {
 
 .menus a:hover {
     color: #0065FC;
-    box-shadow: inset 0px 2px #0065FC; /* Evite le saut de texte au hover */
+    box-shadow: inset 0 2px #0065FC; /* Evite le saut de texte au hover */
 }
 
 /****** Titre And Sous-titre ***********/
-
 .titre-and-sous-titre {
-
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 .titre-and-sous-titre h1 {
     font-size: 22px;
     font-weight: 700;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-top: 30px;
     line-height: 26px;
 }
@@ -125,8 +121,7 @@ header img {
 form {
     display: flex;
     justify-content: flex-start;
-    padding-top: 35px;
-
+    margin-top: 35px;
 }
 
 .fa-location-dot::before {
@@ -136,22 +131,20 @@ form {
     left: 18px;
     top: 15px;
     color: #000000;
-    border-sizing: border-box;
-    padding: 0px;
+    padding: 0;
 }
 
-form [type="icon"] {
+form [id="icon"] {
     width: 50px;
     height: 48px;
     background: #F2F2F2;
     border: 1px solid #F2F2F2;
-    border-radius: 15px 0px 0px 15px
+    border-radius: 15px 0 0 15px;
 }
 
 input {
     font-weight: 700;
     font-size: 18px;
-
 }
 
 input[type="text"] {
@@ -161,14 +154,13 @@ input[type="text"] {
     line-height: 21px;
     text-align: center;
     color: #000000;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
     border: 1px solid #F2F2F2;
 }
 
 button[type="submit"] {
     align-items: center;
+    font-weight: 700;
+    font-size: 18px;
     padding: 14px 16px;
     gap: 10px;
     height: 50px;
@@ -193,8 +185,7 @@ button[type="submit"] i {
 
 .filtres {
     display: flex;
-    padding-top: 35px;
-
+    margin-top: 38px;
 }
 
 .filtres p {
@@ -206,7 +197,6 @@ button[type="submit"] i {
     text-align: center;
     color: #000000;
     margin-right: 15px;
-
 }
 
 .filtres ul {
@@ -219,10 +209,7 @@ button[type="submit"] i {
 
 .filtres li {
     margin-bottom: 15px;
-}
-
-.filtres li {
-    margin-right: 15px;
+    margin-right: 15px
 }
 
 .filtres button {
@@ -235,54 +222,19 @@ button[type="submit"] i {
     font-weight: 700;
     font-size: 17px;
     background: white;
-
 }
 
-
-.btn-economie {
-
-}
-
-.btn-economie a:before {
-    left: 130%;
-    top: -4px;
-    position: absolute;
-    height: 100%;
-    font-size: 125%;
-    line-height: 3.5;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
-    content: "\f178"
-}
-
-.btn-economie a:hover {
-    border-color: #DEEBFF;
-    color: #000;
-    background: #fff
-}
-
-.btn-economie a:active {
-    -webkit-transition: all 0s;
-    -moz-transition: all 0s;
-    transition: all 0s;
-    background: #000;
-    color: #fff
-
-}
-
-.btn-economie a:hover:before {
-    left: 85%;
+.filtres button:hover{
+    background: #DEEBFF;
 }
 
 /****** Informations ***********/
-
 .information {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 35px 0;
-
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
 .fa-info {
@@ -309,10 +261,7 @@ button[type="submit"] i {
     width: 1306px;
     height: 19px;
     line-height: 19px;
-    color: #000000;
-    flex: none;
-    order: 1;
-    flex-grow: 1;
+    color: #000000; 
 }
 
 /****** Hebergements And Populaires ***********/
@@ -330,7 +279,56 @@ button[type="submit"] i {
 
 /****** Hebergements ***********/
 .hebergements {
-    width: 65%;
+    width: 871px;
+    height: 614px;
+}
+
+.hebergements-title {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hebergements-cards .card {
+  width: 250.33px;
+  height: 207.25px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+justify-content: space-between;
+}
+
+.hebergements-cards img {
+    width: 250.33px;
+    height: 124px;;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 15px 0 15px;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.hebergements-cards .card-rating {
+   margin-bottom: 15px;
 }
 
 /****** Populaires ***********/
@@ -378,6 +376,7 @@ button[type="submit"] i {
     margin-bottom: 5px;
 }
 
+/****** Activités ***********/
 .activites-container {
     display: flex;
     flex-wrap: wrap;
@@ -395,6 +394,56 @@ button[type="submit"] i {
 
 .activites-container article img {
     width: 100%;
+
+}
+
+/****** FOOTER ***********/
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 1340px;
+    height: 163px;
+    background: #F2F2F2;
+    margin-top: 65px;
+}
+
+
+.renseignements {
+    display: flex;
+
+}
+
+.renseignements h5 {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.renseignements ul li {
+    display: flex;
+}
+
+.renseignements a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+}
+
+.a-propos {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.renseignements section {
+    display: flex;
+}
+
+.renseignements {
+
 }
 
 
