@@ -333,6 +333,10 @@ button[type="submit"] i {
     margin-bottom: 15px;
 }
 
+.hebergements h4{
+    margin-top: 30px;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 33%;
@@ -480,6 +484,7 @@ footer {
 .renseignements a {
     text-decoration: none;
     color: #000000;
+    font-size: 16px;
 }
 
 
